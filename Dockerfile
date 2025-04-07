@@ -22,7 +22,7 @@ LABEL org.opencontainers.image.title="CV Spring Service Registry" \
       org.opencontainers.image.source="https://github.com/creatorsventure/s01-service-registry" \
       #org.opencontainers.image.version="1.0.0" \
       org.opencontainers.image.authors="Ramakrishna R <ramakrishna@creatorsventure.com>" \
-      org.opencontainers.image.documentation="https://github.com/creatorsventure/s01-service-registry" \
+      org.opencontainers.image.documentation="https://github.com/creatorsventure/s01-service-registry"
       #org.opencontainers.image.licenses="MIT"
 
 # Set the working directory
