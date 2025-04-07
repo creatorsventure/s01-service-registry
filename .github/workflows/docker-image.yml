@@ -26,7 +26,7 @@ jobs:
       - name: Set up image name and tags
         id: vars
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/spring-registry
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
           TIMESTAMP_TAG=$(date +%s)
           echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_OUTPUT
           echo "TIMESTAMP_TAG=$TIMESTAMP_TAG" >> $GITHUB_OUTPUT
