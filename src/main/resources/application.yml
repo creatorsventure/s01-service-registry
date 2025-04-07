@@ -1,6 +1,8 @@
 spring:
   application:
     name: s01-service-registry
+  profiles:
+    active: test
 #Server
 server:
   port: 8761
@@ -8,6 +10,8 @@ server:
 
 #eureka
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
