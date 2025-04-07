@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: s01-service-registry
+#Server
+server:
+  port: 8761
+  shutdown: graceful
+
+#eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+# Logger
+logging:
+  file:
+    name: "./config/log/service-registry.log"
+  level:
+    com.cv: info
+    org.hibernate: info
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
+    org.hibernate.stat: trace
+    org.hibernate.SQL_SLOW: info
+    org.hibernate.cache: debug
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
+      clean-history-on-start: true
