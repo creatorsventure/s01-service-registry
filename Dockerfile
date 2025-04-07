@@ -1,5 +1,5 @@
-# Use a base image with Java (OpenJDK 17 is common for Spring Boot apps)
-FROM eclipse-temurin:23-jdk as builder
+# Use Maven base image to build the project
+FROM maven:3.9.9-eclipse-temurin-23 as builder
 
 # Set the working directory
 WORKDIR /app
@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . .
 
 # Download dependencies (this helps take advantage of Docker caching)
-RUN ./mvnw dependency:go-offline -B
+RUN mvn dependency:go-offline -B
 
 # Package the application
-RUN ./mvnw package -DskipTests
+RUN mvn package -DskipTests
 
 # ---- Create a smaller image for running ----
 FROM eclipse-temurin:23-jre
