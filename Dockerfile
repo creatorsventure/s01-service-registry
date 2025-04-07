@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Download dependencies (this helps take advantage of Docker caching)
-RUN ./mvnw dependency:go-offline -B
+RUN chmod +x ./mvnw && ./mvnw dependency:go-offline -B
 
 # Package the application
 RUN ./mvnw package -DskipTests
