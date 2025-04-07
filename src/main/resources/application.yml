@@ -2,7 +2,7 @@ spring:
   application:
     name: s01-service-registry
   profiles:
-    active: test
+    active: dev
 #Server
 server:
   port: 8761
