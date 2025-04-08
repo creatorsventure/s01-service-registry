@@ -14,3 +14,4 @@ eureka:
       defaultZone: http://local.service-registry.docker:8761/eureka/
       # Future: add other nodes here for cluster
       # defaultZone: http://eureka1:8761/eureka/,http://eureka2:8761/eureka/
+  environment: CV-DEVELOPMENT

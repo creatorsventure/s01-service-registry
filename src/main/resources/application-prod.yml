@@ -11,6 +11,7 @@ eureka:
     register-with-eureka: false  # This server won't register itself
     fetch-registry: false        # This server won't try to pull from others
     service-url:
-      defaultZone: http://local.docker.service-registry:8761/eureka/
+      defaultZone: http://local.service-registry.docker:8761/eureka/
       # Future: add other nodes here for cluster
       # defaultZone: http://eureka1:8761/eureka/,http://eureka2:8761/eureka/
+  environment: CV-PRODUCTION
