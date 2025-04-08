@@ -1,0 +1,4 @@
+#eureka
+eureka:
+  instance:
+    hostname: local.docker.service-registry
