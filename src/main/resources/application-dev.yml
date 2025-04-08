@@ -1,4 +1,4 @@
 #eureka
 eureka:
   instance:
-    hostname: localhost
+    hostname: local.docker.service-registry
