@@ -15,3 +15,4 @@ eureka:
       # Future: add other nodes here for cluster
       # defaultZone: http://eureka1:8761/eureka/,http://eureka2:8761/eureka/
   environment: CV-PRODUCTION
+  datacenter: CV-PRODUCTION-VENDOR
