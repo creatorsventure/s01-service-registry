@@ -1,6 +1,8 @@
 #eureka
 eureka:
   instance:
+    # Hostname here tells downstream Services (e.g., org-service, unit-service, etc):
+    # “You can find me (Eureka Server) at http://local.service-registry.docker:8761.”
     hostname: local.service-registry.docker  # 👈 the name this server is known by to others
     prefer-ip-address: false
     lease-renewal-interval-in-seconds: 10
@@ -11,6 +13,7 @@ eureka:
     register-with-eureka: false  # This server won't register itself
     fetch-registry: false        # This server won't try to pull from others
     service-url:
+      # instance.hostname and defaultZone domain name (local.service-registry.docker) must be same
       defaultZone: http://local.service-registry.docker:8761/eureka/
       # Future: add other nodes here for cluster
       # defaultZone: http://eureka1:8761/eureka/,http://eureka2:8761/eureka/
