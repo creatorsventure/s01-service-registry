@@ -8,13 +8,6 @@ server:
   port: 8761
   shutdown: graceful
 
-#eureka
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: false
-    fetch-registry: false
 # Logger
 logging:
   file:
